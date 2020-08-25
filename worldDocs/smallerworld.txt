@@ -1,0 +1,91 @@
+// File: smallerworld.txt
+// Data file for SeaPort projects
+// Date: Fri Jun 01 16:30:10 EST 2019
+// parameters: 1 1 5 5 1 5 
+// ports, docks, pships, cships, jobs, persons
+
+// port name index parent(null)
+// port <String> <int> <int> port 
+port ChileSeaPort 10000 0
+port PeruSeaPort 10001 0
+
+// dock name index parent(port)
+// dock <string> <int> <int>
+dock CH_Pier_01 1001 10000 30090 
+dock CH_Pier_02 1002 10000 40122 
+ 
+dock PE_Pier_03 1003 10001 30103 
+dock PE_Pier_04 1004 10001 40131 
+ 
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+// pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+pship   Toughies 	30090 	1001 	54.12 469.62 98.59 30.95 2917 1086 1086
+pship   PinoyPower 	30103 	1003 	170.77 229.38 120.70 42.05 295 524 147
+
+pship   Medials 	30144 	10000	248.62 167.62 35.28 29.76 9 128 4
+pship   Roughers 	30127 	10000	54.12 469.62 98.59 30.95 2917 1086 1086
+pship   Lumper 		30025 	10001	84.61 372.77 80.15 37.56 562 461 281
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+// cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+cship   Hawk 		40122 	1002 	232.77 158.85 116.90 15.97 21.54 199.43 711.02
+cship   Arcadian 	40131 	1004 	244.71 301.46 62.77 20.26 63.28 144.02 494.27
+
+cship   Balot 		40012 	10000	105.43 411.31 46.69 30.28 116.45 175.31 771.42
+cship   Skirmishers 	40072 	10001 	243.07 477.38 98.01 21.87 76.79 114.11 472.53
+cship   Unpriced 	40106 	10001 	205.06 296.87 33.95 36.73 45.08 122.26 327.62
+
+// person name index parent skill
+// person <string> <int> <int> <string>
+person Ronald 		55001 	10000 	captain
+person Johnny 		55002 	10000 	mate
+person Matthew 		55003 	10000 	stevedore
+person Thomas 		55004 	10000 	cleaner
+person Arnold 		55005 	10000 	clerk
+person Anna 		55006 	10000 	janitor
+person Maus 		55007 	10000 	crew
+person Gary		55008 	10000 	electrician
+person Susan		55009 	10000 	inspector
+
+person James		55121 	10001 	captain
+person Amy		55122 	10001 	mate
+person Maria		55123 	10001 	stevedore
+person Janis		55124 	10001 	cleaner
+person Glenn		55125 	10001 	clerk
+person Wang		55126 	10001 	janitor
+person Khalil		55127 	10001 	crew
+person Anthony		55128 	10001 	electrician
+person Dawn		55129 	10001 	inspector
+
+
+// job name index parent duration [skill]* (zero or more, matches skill in person, may repeat)
+// job <string> <int> <int> <double> [<string>]*
+job Job_40_16_01 	60520 	1001 	270.34 	captain inspector
+job Job_40_16_02 	60521 	1001 	100.16 	electrician janitor crew
+job Job_40_16_03 	60522 	1002 	150.34 	electrician inspector clerk
+job Job_40_16_04 	60523 	1002 	237.98 	inspector mate crew
+job Job_40_16_05 	60524 	1003 	72.11 	stevedore captain cleaner
+job Job_40_16_06 	60525 	1003 	500.86 	crew janitor cleaner
+job Job_40_16_07 	60526 	1004 	178.99 	mate janitor clerk
+job Job_40_16_08 	60527 	1004 	55.45 	captain mate
+
+job Job_40_26_09 	60528 	30144 	338.76 	crew mate janitor 
+job Job_40_26_10 	60529 	30144 	502.94 	electrician stevedoreclerk captain
+job Job_40_26_11 	60530 	30144 	92.21 	inspector electrician
+
+job Job_40_26_12 	60531 	30127 	118.54 	inspector captain stevedore
+job Job_40_26_13 	60532 	30127 	63.66 	janitor cleaner inspector 
+
+job Job_40_26_14 	60533 	30025 	99.14 	clerk mate crew 
+job Job_40_26_15 	60534 	30025 	543.06 	captain electrician
+job Job_40_26_16 	60535 	30025 	111.34 	crew captain setvedore
+job Job_40_26_17 	60536 	30025 	864.06 	stevedore janitor cleaner
+
+job Job_40_26_18 	60537 	40012 	748.78 	captain crew mate clerk
+job Job_40_26_19 	60538 	40012 	435.69 	crew clerk crew
+
+job Job_40_26_20 	60539 	40072 	545.38 	electrician crew inspector
+job Job_40_26_21 	60540 	40072 	700.57 	captain cleaner crew mate stevedore
+
+job Job_40_16_22 	60541 	40106 	999.99 	captain stevedore electrician inspector
+job Job_40_16_23 	60542 	40106 	507.11 	inspector cleaner captain 

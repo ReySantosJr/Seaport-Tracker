@@ -1,0 +1,116 @@
+// File: smallworld.txt
+// Data file for SeaPort projects
+// Date: Fri Jun 01 16:30:10 EST 2019
+// parameters: 1 1 5 5 1 5 
+// ports, docks, pships, cships, jobs, persons
+
+// port name index parent(null)
+// port <String> <int> <int> port 
+port Philippines 10000 0
+port Malaysia 10001 0
+port Indonesia 10002 0
+
+// dock name index parent(port)
+// dock <string> <int> <int>
+dock PH_Pier_01 1001 10000 30090 
+dock PH_Pier_03 1003 10000 40122 
+dock PH_Pier_02 1002 10000 40131 
+ 
+dock INDO_Pier_01 1023 10002 30103 
+dock INDO_Pier_03 1021 10002 30144 
+dock INDO_Pier_02 1022 10002 40012 
+
+dock MALAY_Pier_01 1013 10001 30127 
+dock MALAY_Pier_02 1012 10001 30025 
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+// pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+pship   Toughies 	30090 	1001 	54.12 469.62 98.59 30.95 2917 1086 1086
+pship   PinoyPower 	30103 	1023 	170.77 229.38 120.70 42.05 295 524 147
+pship   Medials 	30144 	1021 	248.62 167.62 35.28 29.76 9 128 4
+pship   Roughers 	30127 	1013 	54.12 469.62 98.59 30.95 2917 1086 1086
+pship   Lumper 		30025 	1012 	84.61 372.77 80.15 37.56 562 461 281
+
+
+
+pship   Seriation 	30073 	10000 	183.80 325.10 124.51 24.40 1717 1019 858
+pship   Implorer 	30139 	10000 	62.57 238.08 57.25 19.53 1494 879 747
+pship   Empurpling 	30084 	10000 	78.70 321.24 42.18 27.62 802 684 401
+pship   Cognates 	30134 	10001 	106.23 458.98 49.41 24.23 138 124 69
+pship   Gonadal 	30062 	10002 	155.46 260.52 98.86 32.30 84 403 42
+pship   Titians 	30011 	10002 	189.96 394.44 82.63 16.69 2664 756 756
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+// cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+cship   Hawk 		40122 	1003 	232.77 158.85 116.90 15.97 21.54 199.43 711.02
+cship   Arcadian 	40131 	1002 	244.71 301.46 62.77 20.26 63.28 144.02 494.27
+cship   Balot 		40012 	1022 	105.43 411.31 46.69 30.28 116.45 175.31 771.42
+
+cship   Skirmishers 	40072 	10000 	243.07 477.38 98.01 21.87 76.79 114.11 472.53
+cship   Unpriced 	40106 	10001 	205.06 296.87 33.95 36.73 45.08 122.26 327.62
+cship   Sorties 	40124 	10001 	190.46 120.08 95.42 21.03 79.69 122.29 275.37
+cship   Oversees 	40137 	10001 	172.42 349.71 55.97 33.97 109.56 137.00 286.30
+cship   Lithias 	40099 	10002 	101.21 340.47 82.45 38.00 127.26 177.08 742.86
+cship   Cardholder 	40063 	10002 	86.93 374.32 84.39 24.17 195.28 106.48 823.14
+
+
+// person name index parent skill
+// person <string> <int> <int> <string>
+person Ronald 		55101 	10000 	captain
+person Johnny 		55123 	10000 	electrician
+person Matthew 		55145 	10000 	inspector
+person Thomas 		55187 	10000 	cleaner
+person Arnold 		55134 	10000 	clerk
+person Anna 		55192 	10000 	janitor
+person Maus 		55017 	10000 	crew
+
+person Alejandro	55101 10001 captain
+person Doris 		55223 	10001 	electrician
+person Lamar 		55225 	10001 	inspector
+person Thomas 		55227 	10001 	cleaner
+person Maryann 		55224 	10001 	clerk
+person Amber 		55222 	10001 	janitor
+person Donald 		55227 	10001 	crew
+
+person Ramiro		55101 	10002 	captain
+person Shelly 		55223 	10002 	electrician
+person Woodrow 		55225 	10002 	inspector
+person Domingo 		55227 	10002 	cleaner
+person Alyssa 		55224 	10002 	clerk
+person Luther 		55222 	10002 	janitor
+person Paulette		55227 	10002 	crew
+
+// job name index parent duration [skill]* (zero or more, matches skill in person, may repeat)
+// job <string> <int> <int> <double> [<string>]*
+job Job_40_16_01 	60520 	1001 	270.34 	captain
+job Job_40_16_02 	60521 	1003 	89.06 	janitor crew
+job Job_40_16_03 	60522 	1002 	150.34 	electrician inspector clerk
+job Job_40_16_04 	60523 	1023 	89.06 	inspector cleaner
+job Job_40_16_05 	60524 	1021 	150.34 	crew inspector captain
+job Job_40_16_06 	60525 	1022 	89.06 	janitor cleaner
+job Job_40_16_07 	60526 	1013 	150.34 	janitor clerk
+job Job_40_16_08 	60520 	1012 	220.75 	captain
+
+job Job_40_26_01 	60521 	30073 	178.16 	janitor
+job Job_40_26_02 	60522 	30073 	112.34 	electrician inspector clerk
+job Job_40_26_03 	60523 	30139 	82.06 	inspector cleaner
+job Job_40_26_04 	60524 	30084 	118.54 	crew inspector captain
+job Job_40_26_05 	60525 	30134 	33.66 	janitor cleaner
+job Job_40_26_06 	60526 	30062 	99.14 	clerk crew
+job Job_40_26_07 	60523 	30011 	543.06 	inspector cleaner
+job Job_40_26_08 	60524 	40072 	111.34 	crew captain
+job Job_40_26_09 	60525 	40106 	864.06 	janitor cleaner
+job Job_40_26_10 	60526 	40124 	45.38 	inspector crew
+job Job_40_26_11 	60523 	40137 	56.96 	crew clerk
+job Job_40_26_12 	60524 	40099 	545.38 	crew inspector 
+job Job_40_26_13 	60525 	40063 	90.22 	cleaner
+
+job Job_40_16_07 	60526 	10002 	650.94 	clerk janitor 
+job Job_40_16_04 	60523 	10001 	181.46 	inspector cleaner
+job Job_40_16_05 	60524 	10001 	150.34 	crew captain
+job Job_40_16_06 	60525 	10002 	811.72 	janitor cleaner
+job Job_40_16_07 	60526 	10002 	142.34 	clerk electrician
+job Job_40_16_04 	60523 	10001 	123.55 	cleaner crew clerk
+job Job_40_16_05 	60524 	10001 	978.39 	captain electrician
+job Job_40_16_06 	60525 	10002 	491.16 	janitor cleaner
+job Job_40_16_07 	60526 	10002 	89.18 	janitor clerk
