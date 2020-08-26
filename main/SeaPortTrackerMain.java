@@ -251,7 +251,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	    for (Person p : seaPort.getPersons()) {
 		if (selectedNode.getUserObject().toString().contains(p.getName())
 			&& selectedNode.getUserObject().toString().contains(String.valueOf(p.getIndex()))) {
-		    infoBoxTextArea.append(p.toString() + "\n");
+		    infoBoxTextArea.append(p.toString() + "\n\n");
 		}
 	    }
 
