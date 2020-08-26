@@ -41,7 +41,8 @@ public class PassengerShip extends Ship {
      */
     @Override
     public String toString() {
-	return "Passenger Ship: " + name + ", " + "Index: " + index + " \n" + 
+	return "Passenger Ship: " + name + " \n" + 
+		"Index: " + index + " \n" + 
 		"Parent - " + parent + "\n" + 
 		"Draft - " + draft + "\n" + 
 		"Length - " + length + " \n" + 
