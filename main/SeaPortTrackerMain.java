@@ -1,4 +1,4 @@
-/** --- Project 3 of CMSC 335 ---
+/** 
  *  Program Name: Sea Port Program
  *  Program Purpose: Read data files of different sea ports. 
  *  Use HashMaps, Comparable, & Comparator to help sort the data.
@@ -21,17 +21,21 @@ import java.util.Scanner;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import code.CargoShip;
 import code.Dock;
@@ -74,7 +78,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
      */
     public SeaPortTrackerMain() {
 	// Sets title & JFrame settings
-	setTitle("Sea Port Program 3");
+	setTitle("World of Seaports");
 	setSize(1140, 555);
 	setLocation(25, 30);
 	setResizable(false);
@@ -82,6 +86,20 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	/*
 	 * Program 3, Center LAYOUT DESIGN
 	 */
+	dataFileTextFieldBox = Box.createHorizontalBox();
+	dataFilePanel = new JPanel();
+	dataFileButton = new JButton("Select Data File");
+	dataFileLabel = new JLabel("Data File: ");
+	dataFileTextField = new JTextField(90);
+	
+	// Top Layout using Box outputDataLayout
+	dataFileTextField.setEditable(false);
+	dataFileLabel.setBorder(BorderFactory.createEtchedBorder());
+	dataFileTextFieldBox.add(dataFileLabel);
+	dataFileTextFieldBox.add(dataFileTextField);
+	dataFilePanel.setBorder(BorderFactory.createRaisedBevelBorder());
+	dataFilePanel.add(dataFileButton);
+	dataFilePanel.add(dataFileTextFieldBox);
 
 	// World tree ScrollPane bar setup. Added to makeWorldTreePanel
 	worldTreeNodeScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -110,8 +128,10 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	treePanel.add(makeWorldTreePanel, BorderLayout.EAST);
 	treePanel.add(infoBox, BorderLayout.WEST);
 
-	// Added to contentPane
-	contentPane.add("North", dataFilePanel).setPreferredSize(new Dimension(0, 40));
+	/*
+	 *  All added to contentPane
+	 */
+	contentPane.add("North", dataFilePanel);
 	contentPane.add("West", treePanel);
 	contentPane.add("Center", programFeaturesLayout);
 	contentPane.add("East", outputDataLayout).setPreferredSize(new Dimension(300, 375));
