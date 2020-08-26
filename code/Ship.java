@@ -138,7 +138,8 @@ public class Ship extends Thing {
      */
     @Override
     public String toString() {
-	return "Ship: " + name + ", " + "Index: " + index + " \n" + 
+	return "Ship: " + name + " \n" + 
+		"Index: " + index + " \n" + 
 		"Parent: " + parent + "\n" + 
 		"Draft: " + draft + " \n" +
 		 "Length: " + length + ", " + 
