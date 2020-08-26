@@ -1,8 +1,8 @@
 package code;
 
 /** 
- *  Program Name: Sea Port Program
- *  Program Purpose: Read data files of different sea ports.
+ *  Program Name -Sea Port Program
+ *  Program Purpose -Read data files of different sea ports.
  *  FILE NAME - PassengerShip.java
  *  FILE PURPOSE - Outputs the data about passenger ships
  */
@@ -41,9 +41,14 @@ public class PassengerShip extends Ship {
      */
     @Override
     public String toString() {
-	return "Passenger Ship: " + name + ", " + "Index: " + index + ", " + "Parent: " + parent + "\n" + "Draft: "
-		+ draft + ", " + "Length: " + length + ", " + "Weight: " + weight + ", " + "Width: " + width + "\n"
-		+ "Number of OccupiedRooms: " + numberOfOccupiedRooms + "\n" + "Number of Rooms: " + numberOfRooms
-		+ "\n" + "Number of Passengers: " + numberOfPassengers;
+	return "Passenger Ship: " + name + ", " + "Index: " + index + " \n" + 
+		"Parent - " + parent + "\n" + 
+		"Draft - " + draft + "\n" + 
+		"Length - " + length + " \n" + 
+		"Weight - " + weight + " \n" + 
+		"Width - " + width + "\n" + 
+		"Number of OccupiedRooms: " + numberOfOccupiedRooms + "\n" + 
+		"Number of Rooms: " + numberOfRooms + "\n" + 
+		"Number of Passengers: " + numberOfPassengers;
     }
 }
