@@ -181,7 +181,9 @@ public class SeaPortTrackerTwo extends SeaPortTrackerOne {
 	shipsInQueBox.add(enterKeyPanel);
 	shipsInQueBox.add(chooseShipDimensionsPanel);
 
-	// Added to contentPane
+	/*
+	 *  All added to contentPane
+	 */
 	programFeaturesLayout.add(sortMethodPanel, BorderLayout.CENTER);
 	programFeaturesLayout.add(shipsInQueBox, BorderLayout.SOUTH);
 
