@@ -1,4 +1,4 @@
-/** --- Project 1 of CMSC 335 ---
+/** 
  *  Program Name: Sea Port Program
  *  Program Purpose: Read data files of different sea ports.
  *  FILE NAME - SeaPortProgram.java
