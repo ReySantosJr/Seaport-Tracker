@@ -10,6 +10,7 @@
  *  @since 10-12-2019
  */
 
+
 package main;
 
 import java.io.File;
@@ -85,7 +86,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	// World tree ScrollPane bar setup. Added to makeWorldTreePanel
 	worldTreeNodeScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	worldTreeNodeScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	worldTreeNodeScrollPane.setPreferredSize(new Dimension(320, 300));
+	worldTreeNodeScrollPane.setPreferredSize(new Dimension(275, 300));
 	worldTreeNodeScrollPane.setBorder(BorderFactory.createEtchedBorder());
 	makeWorldTreePanel.setBorder(BorderFactory.createTitledBorder("World Tree"));
 	makeWorldTreePanel.add(worldTreeNodeScrollPane);
@@ -98,6 +99,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	infoPanel.add(infoScrollPane);
 
 	// Combine info button and generate world tree button
+	infoBox.setPreferredSize(new Dimension(275, 310));	
 	infoBox.add(infoPanel);
 	infoBox.add(clearInfoButton);
 
@@ -112,7 +114,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	contentPane.add("North", dataFilePanel).setPreferredSize(new Dimension(0, 40));
 	contentPane.add("West", treePanel);
 	contentPane.add("Center", programFeaturesLayout);
-	contentPane.add("East", outputDataLayout).setPreferredSize(new Dimension(250, 500));
+	contentPane.add("East", outputDataLayout).setPreferredSize(new Dimension(300, 375));
 
     }// End of SeaPortProgramThree constructor
 
@@ -302,9 +304,6 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 		    displayWorldButton.setEnabled(false);
 		} 
 		else {
-		    // Ships in que button enabled with new file
-		    allShipsInQueButton.setEnabled(true);
-
 		    // Clears data for the next file
 		    clearDataFromFile();
 
