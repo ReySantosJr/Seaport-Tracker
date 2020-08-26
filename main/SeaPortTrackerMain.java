@@ -75,7 +75,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
     public SeaPortTrackerMain() {
 	// Sets title & JFrame settings
 	setTitle("Sea Port Program 3");
-	setSize(1200, 555);
+	setSize(1140, 555);
 	setLocation(25, 30);
 	setResizable(false);
 
