@@ -78,6 +78,7 @@ public class SeaPortTrackerMain extends SeaPortTrackerTwo {
 	setSize(1140, 555);
 	setLocation(25, 30);
 	setResizable(false);
+	setIconImage(new ImageIcon("globe-png-icon-7.jpg").getImage());
 
 	/*
 	 * Program 3, Center LAYOUT DESIGN
