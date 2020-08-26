@@ -138,8 +138,12 @@ public class Ship extends Thing {
      */
     @Override
     public String toString() {
-	return "Ship: " + name + ", " + "Index: " + index + ", " + "Parent: " + parent + "\n" + "Draft: " + draft + ", "
-		+ "Length: " + length + ", " + "Weight: " + weight + ", " + "Width: " + width + "\n" + jobs;
+	return "Ship: " + name + ", " + "Index: " + index + " \n" + 
+		"Parent: " + parent + "\n" + 
+		"Draft: " + draft + " \n" +
+		 "Length: " + length + ", " + 
+		"Weight: " + weight + " \n" + 
+		 "Width: " + width + "\n" + jobs;
     }
 
     /*
