@@ -8,5 +8,4 @@ This program was to also show and practice using inheritance, and data structure
 The user has to upload the appropriate world text doc that contains all the seaport information (provided in the appropriate folder). From there, the user can see the world text doc and its seaports and ships with its personnel.
 The user can sort the world and see it listed and or use a JTree for better focus.
 
-A JAR file is already provided to use the program.
-  
+A jar file is already provided to use the program.
