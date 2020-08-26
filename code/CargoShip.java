@@ -42,7 +42,8 @@ public class CargoShip extends Ship {
      */
     @Override
     public String toString() {
-	return "Cargo Ship: " + name + ", " + "Index: " + index + " \n" + 
+	return "Cargo Ship: " + name + " \n" + 
+		"Index: " + index + " \n" + 
 		"Parent - " + parent + "\n" + 
 		"Draft - " + draft + " \n" +
 		"Length - " + length + " \n" + 
